@@ -1,127 +1,29 @@
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Road Rage', cursive;
+    box-sizing: border-box;
 }
-.body{
-    display: grid;
-}
-
-.header{
-    background-color: rgb(43, 39, 39);
-    display: block;
-}
-.logo__img{
-    margin-top: 0px;
-    width: 50px;
-}
-.logo{
-    text-align: left;
-    padding: 10px;
-}
-.nav{
-    font-size: 35px;
-    margin-top: -75px;
-    text-align: center;
-}
-.nav__li{
+.navbar-brand{
+    font-size: 120px;
     padding: 20px;
-    display: inline-block;
-    color: white;
 }
-.nav__li a{
-    color: white;
-    text-decoration: none;
+.navbar-nav{
+    font-size: 40px;
 }
-.main{
-    padding-bottom: 500px;
-    background-color: rgb(176, 212, 221);
+.dropdown-menu{
+    font-size: 30px;
 }
-.h1{
-    padding: 100px 0px 50px;
-    color: rgb(43, 39, 39);
-    text-align: center;
-    font-size: 150px;
-}
-.h1__img{
-    padding-left: 25%;
-    width: 1000px;
-    height: 600px;
-}
-.nov__li{
-    transition: all 0.2s ease;
-    border-radius: 30px;
-    margin: 20px;
-    background-color: rgb(43, 39, 39);
-    color: rgb(255, 255, 255);
-    padding: 30px 20px 30px;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-}
-.nov__li:hover{
-    transform: scale(1.1);
-    box-shadow: 0.3rem 0.4rem 0.5rem rgba(46, 44, 44, 0.5);
-}
-.nov__li img{
-    border: none;
-    border-radius: 30px;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-.nov__li img:hover{
-    box-shadow: 0.3rem 0.4rem 1rem rgba(0, 0, 0, 0.6);
-}
-.nov__p{
-    font-size: 25px;
-}
-.nov__buy{
-    transition: .2s ease;
-    color: rgb(43, 39, 39);
-    display: inline;
-    padding: 10px 20px;
-    margin-top: 30px;
-    margin-right: 15px;
-    border-radius: 7px;
-    background-color: rgb(176, 212, 221);
-    font-size: 25px;
-}
-.nov__buy:hover{
-    background:  rgb(68, 129, 145);
-}
-.nov__li i{
-    transition: .2s ease;
-    color: rgb(43, 39, 39);
-    margin-top: 30px;
-    border-radius: 10px;
-    padding: 14px 20px;
-    background-color: rgb(176, 212, 221);
-}
-.nov__li i:hover{
-    background:  rgb(68, 129, 145);
-}
-.nov__ul{
-    text-align: center;
-
-}
-.h2{
-    margin: 200px 0px 50px;
-    color: rgb(43, 39, 39);
-    text-align: center;
-    font-size: 80px;
+.text-center{
+    font-size: 90px;
 }
 .nos{
-    padding: 100px 0px 60px;
-    color: rgb(43, 39, 39);
+    font-size: 160px;
     text-align: center;
-    font-size: 100px;
 }
 .nos__text{
-    color: rgb(43, 39, 39);
-    text-align: center;
     font-size: 40px;
+    text-align: center;
 }
 .h1-contact{
     padding: 100px 0px 150px;
@@ -182,37 +84,69 @@
     color: rgb(43, 39, 39);
     font-size: 25px
 }
-.footer{
-    background-color: rgb(43, 39, 39) ;
-    color: white;
-}
 .form__input[type="submit"]:focus{
 background: rgb(176, 212, 221);
 }
 .form__input[type="submit"]:active{
 background: linear-gradient(to bottom, rgb(91, 194, 220), rgb(176, 212, 221) ) ;
 }
+.footer{
+background-color: rgb(43, 39, 39) ;
+color: white;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 0fr .5fr .2fr;
+gap: 0px 0px;
+grid-template-areas:
+". . ."
+"navfooter dat rrss"
+"pie pie pie";
+}
+      
+.navfooter { 
+    grid-area: navfooter;
+}
+      
+.dat {
+    grid-area: dat; 
+    grid-row: inherit;
+}
+      
+.rrss {
+    grid-area: rrss; 
+    grid-row: inherit;
+}
+      
+.pie {
+    grid-area: pie; 
+}
+      
 .foot__li{
     list-style: none;
-    padding-top: 40px;
-    margin-left: 20px;
+    padding: 25px 0 15px;
 }
 .foot__li a{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color: white;
+}
+.foot__ul{
+    display: flex;
+    flex-direction: column;
 }
 .dat__h3{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+    padding: 25px 0 15px;
+    display: flex;
+    justify-content: center;
 }
 .dat__li{
     padding: 15px;
     text-align: center;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 .dat__li a{
     font-family: 'Montserrat', sans-serif;
@@ -221,104 +155,97 @@ background: linear-gradient(to bottom, rgb(91, 194, 220), rgb(176, 212, 221) ) ;
     color: white;
     font-size: 15px;
 }
-.dat{
-    margin-top: -215px;
+.dat__ul{
+display: flex;
+flex-direction: column;
 }
 .rrss__h3{
     font-family: 'Montserrat', sans-serif;
     margin-right: 20px;
     font-size: 20px;
-    padding: 6px;
-    text-align: right;
+    padding: 25px 0 15px;
+    display: flex;
+    justify-content: center;
 }
 .rrss__li a{
-    margin-right: 20px;
-    padding: 4px;
-    text-align: right;
-    display: block;
     color: white;
 }
-.rrss{
-    margin-top: -205px;
+.rrss__ul{
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 35px;
 }
 .h4{
     border-top: 3px solid rgb(176, 212, 221);
     border-bottom: 5px solid rgb(176, 212, 221);
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 200px;
+    margin-top: 50px;
     padding: 8px;
     text-align: center;
 }
-@media screen and (max-width: 769px) {
-    *{
-        box-sizing: border-box;
-    }
-    .grid-contenedor{
-        display: grid;
-    }
-    .header, .main, .footer{
-        display: grid;
-        width: 100%;            
-        }
-    .nav{
-        display: flex;
-    }
-    .nav__li{
-        font-size: 5vh;
-        width: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 10vh;
-    }
-    .h1{
-        font-size: 20vh;
-        display: flex;
-        flex-direction: row;
-        padding-left: 30vh;
-    }
-    .h1__img{
-        display: flex;
-        padding-left: 0vh;
-    }
-    .h2{
-        display: flex;
-        flex-direction: row;
-        padding-left: 45vh;
-    }
-    .nov__ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding-right: 25vh;
-    }
-    .dat{
-        font-size: 5vh;
-        width: 145vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .rrss{
-        font-size: 5vh;
-        width: 145vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .dat__h3{
-        font-size: 3vh;
-    }
-    .rrss__h3{
-        font-size: 3vh;
-        margin-top: -8vh;
-    }
-    .h4{
-        font-size: 2vh;
-        width: 100%;
-        display: flex;
-        padding-left: 55vh;
-    }
+.menu-footer{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 768px){
+.foot__li a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    color: white;
+} 
+.dat__h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    padding: 25px 0 15px;
+    display: flex;
+    justify-content: center;
+}
+.dat__ul{
+font-size: 15px;
+}
+.dat__li{
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+}
+.dat__li a{
+    font-family: 'Montserrat', sans-serif;
+    padding: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 8px;
+}
+.rrss__h3{
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 0px;
+    font-size: 10px;
+    padding: 25px 0 15px;
+    text-align: center;
+}
+.rrss__ul{
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.h4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 2px solid rgb(176, 212, 221);
+    border-bottom: 3px solid rgb(176, 212, 221);
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0px;
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+} 
 }
