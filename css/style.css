@@ -4,6 +4,9 @@
     font-family: 'Road Rage', cursive;
     box-sizing: border-box;
 }
+body{
+    background-color:rgb(176, 212, 221);
+}
 .navbar-brand{
     font-size: 120px;
     padding: 20px;
