@@ -1,2 +1,2 @@
-# urban.style.peralta.clase11
-trabajando con bootstrap clase 11
+# urban.style.peralta.segunda-entrega-proyecto-final
+segunda entrega proyecto final
