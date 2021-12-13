@@ -20,10 +20,6 @@ body{
 .text-center{
     font-size: 90px;
 }
-.nos{
-    font-size: 160px;
-    text-align: center;
-}
 .nos__text{
     font-size: 40px;
     text-align: center;
@@ -48,7 +44,7 @@ body{
     outline: 4px solid rgb(43, 39, 39);
 }
 .form{
-    text-align: center;
+    justify-content: center;
     min-width: 400px;
     flex: 1;
     padding: 30px;
@@ -93,12 +89,64 @@ background: rgb(176, 212, 221);
 .form__input[type="submit"]:active{
 background: linear-gradient(to bottom, rgb(91, 194, 220), rgb(176, 212, 221) ) ;
 }
+.nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 2.3fr 0fr 0fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "nos nos nos"
+    ". . ."
+    ". . ."; 
+}
+.nos{
+    grid-area: nos;
+    display: flex;
+    flex-direction: column;
+}
+.h1nos{
+    font-size: 160px;
+    text-align: center;
+    animation: inherit;
+    animation:slide-fwd-top 2s cubic-bezier(.25,.46,.45,.94) both
+}
+.nos__text{
+    animation:slide-fwd-bottom 2s cubic-bezier(.25,.46,.45,.94) both
+}
+.contacto{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.2fr 2.1fr 0fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "tit tit tit"
+    "formu formu formu"
+    ". . ."; 
+}
+.tit{
+    grid-area: tit;
+    grid-row: inherit;
+}
+.formu{
+    grid-area: formu;
+    grid-row: inherit;
+}
+
+@keyframes slide-fwd-top{0%{transform:translateZ(0) translateY(100px)}100%{transform:translateZ(160px) translateY(0px)}}
+
+@keyframes slide-fwd-bottom{0%{transform:translateZ(0) translateY(100px)}100%{transform:translateZ(160px) translateY(0px)}}
+
+.formu{
+    animation:rotate-scale-up .65s linear both
+}
+@keyframes rotate-scale-up{0%{transform:scale(1) rotateZ(0)}50%{transform:scale(2) rotateZ(180deg)}100%{transform:scale(1) rotateZ(360deg)}}
+
 .footer{
 background-color: rgb(43, 39, 39) ;
 color: white;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 0fr .5fr .2fr;
+grid-template-rows: 0fr .5fr -1fr;
 gap: 0px 0px;
 grid-template-areas:
 ". . ."
@@ -194,6 +242,10 @@ flex-direction: column;
     justify-content: space-between;
 }
 @media screen and (max-width: 768px){
+ .flex-contact{
+    border-radius: 30px;
+    margin: 10px -15px;
+}
 .foot__li a{
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
