@@ -1,0 +1,73 @@
+footer{
+    background-color: $color-nav-footer ;
+    color: white;
+    div{
+        display: flex;
+        justify-content: space-between;
+        div{
+            ul{
+                display: flex;
+                flex-direction: column;
+                li{
+                    list-style: none;
+                    padding: 25px 0 15px;
+                    margin-left: 15px;
+                    a{
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 20px;
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+        div{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        p{
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 20px;
+                            text-decoration: none;
+                            color: white;
+                        }
+                        padding: 15px;
+                        text-align: center;
+                        display: block;
+                        a{
+                            font-family: 'Montserrat', sans-serif;
+                            padding: 4px;
+                            text-decoration: none;
+                            color: white;
+                            font-size: 15px;
+                        }
+
+                    }
+                }
+        }
+        div{
+                ul{
+                    padding-top: 10px;
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-evenly;
+                    li{
+                        a{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            h4{
+                border-top: 3px solid rgb(176, 212, 221);
+                border-bottom: 5px solid rgb(176, 212, 221);
+                font-size: 15px;
+                font-family: 'Montserrat', sans-serif;
+                margin-top: 50px;
+                padding: 8px;
+                text-align: center;
+            }
+
+    }
+}

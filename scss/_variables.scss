@@ -1,0 +1,26 @@
+// mapas
+$site: (
+    nav-footer: rgb(43, 39, 39),
+    -background: rgb(176, 212, 221),
+    -hover: rgb(68, 129, 145),
+);
+
+@each $sitio, $color in $site {
+    .sitio-#{sitio}{
+        color: $color;
+    }
+}
+
+// extend
+.buy-primary{
+    @extend .nov__buy;
+}
+
+// mixins
+@mixin imagen ($alto, $ancho) {
+    height: $alto;
+    width: $ancho;
+}
+.img{
+    @include imagen(200px, 200px)
+}
